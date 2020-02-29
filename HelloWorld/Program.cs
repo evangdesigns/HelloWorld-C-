@@ -8,14 +8,13 @@ namespace HelloWorld
         {
             var dialects = new string[] { "Southern", "Cockney", "Cali", };
 
-            Console.WriteLine("Pick A Dialect:");
+            Console.WriteLine("Elige un dialecto:");
             foreach (var dialect in dialects)
             {
                 Console.WriteLine(dialect);
             }
 
             var userEntry = Console.ReadLine();
-
             static string Accents(string userEntry)
             {
                 string greeting;
@@ -37,14 +36,28 @@ namespace HelloWorld
             }
                 return greeting;
             }
-
-            //Console.ReadLine(); // What happens if you run the app without this line?
-
             Console.WriteLine(Accents(userEntry));
 
+            ////////////////Hello Name
+            Console.WriteLine("Tu Nombre?");
+            var userName = Console.ReadLine();
+            Console.WriteLine($"Holla {userName}");
 
+            Console.WriteLine("Cuál es tu color favorito?");
+            var favColor = Console.ReadLine();
+
+            ///////Animals and Sylybles
             var animals = new string[] { "Triceratops", "Gorilla", "Corgi", "Toucan", "Dog", "Coyote" };
 
+            // Create a Random object  
+            Random rand = new Random();
+            // Generate a random index less than the size of the array.  
+            int index = rand.Next(animals.Length);
+            // Display the result.  
+            Console.WriteLine($"Te gustaria un {favColor} {animals[index]}");
+
+
+            ///Syllables
             int CountSyllables(string word)
             {
                 char[] vowels = { 'a', 'e', 'i', 'o', 'u', 'y' };
