@@ -142,16 +142,16 @@ namespace HelloWorld
                 }
                 Console.WriteLine(sum);
             }
-            //else if (numbInput.Contains("/"))
-            //{
-            //    sum = Convert.ToDecimal(sum);
-            //    foreach (var n in numbs.Skip(1))
-            //    {
-            //        var finalInt = decimal.Parse(n);
-            //        sum /= finalInt;
-            //    }
-            //    Console.WriteLine(sum);
-            //}
+            else if (numbInput.Contains("/"))
+            {
+                var deci = Convert.ToDecimal(sum);
+                foreach (var n in numbs.Skip(1))
+                {
+                    var finalInt = int.Parse(n);
+                    deci /= finalInt;
+                }
+                Console.WriteLine(deci);
+            }
             else if (numbInput.Contains("^"))
             {
                 foreach (var n in numbs.Skip(1))
@@ -167,6 +167,7 @@ namespace HelloWorld
             else Console.WriteLine("Error");
 
             Console.ReadKey();
+        
         }
     }
 }
